@@ -1,60 +1,72 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,500");
+$media-mobile: "only screen and (max-width : 700px)";
+
 *,
 html,
 body {
   box-sizing: border-box;
   margin: 0;
-  font-family: 'Raleway', sans-serif;
-.wrapper {
-  width: 100vw;
-  height: 100vh;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  background-color: #333;
-  color: #333;
-  .quote-box {
-    width: 650px;
+  font-family: "Raleway", sans-serif;
+  .wrapper {
+    width: 100vw;
+    padding: 0px 25px 20px 20px;
+    min-height: 100vh;
     height: auto;
-    border-radius: 5px;
-    padding: 50px;
-    background-color: white;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    background-color: #333;
+    color: #333;
+    .quote-box {
+      width: 650px;
+      @media #{$media-mobile} {
+        width: 90vw;
+        padding: 10px;
+      }
+      height: auto;
+      border-radius: 5px;
+      padding: 50px;
+      background-color: white;
 
-    .quote {
-      padding: 0px 25px 20px 20px;
-      h1 {
-        text-align: center;
-        font-weight: 500;
+      .quote {
+        padding: 0px 25px 20px 20px;
+        @media #{$media-mobile} {
+          padding: 30px 25px 20px 20px;
+        }
+        h1 {
+          text-align: center;
+          font-weight: 500;
+        }
+        .quote-sign {
+          font-size: 50px;
+        }
       }
-      .quote-sign {
-        font-size: 50px;
+      .author {
+        display: flex;
+        justify-content: end;
+        margin: 20px 0 50px 0;
       }
-    }
-    .author {
-      display: flex;
-      justify-content: end;
-      margin: 20px 0 50px 0;
-    }
-    .floater {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .post > .tweet-quote,
-      .post > .post-quote {
-        color: white;
-        padding: 10px 15px;
-        border-radius: 5px;
-        text-decoration: none;
-        background-color: #333;
-      }
-      .new-quote {
-        width: 130px;
-        height: 40px;
-        border-radius: 5px;
-        text-align: center;
-        color: white;
-        border: none;
-        background-color: #333;
+      .floater {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .post > .tweet-quote,
+        .post > .post-quote {
+          color: white;
+          padding: 10px 15px;
+          border-radius: 5px;
+          text-decoration: none;
+          background-color: #333;
+        }
+        .new-quote {
+          width: 130px;
+          height: 40px;
+          border-radius: 5px;
+          text-align: center;
+          color: white;
+          border: none;
+          background-color: #333;
+        }
       }
     }
   }

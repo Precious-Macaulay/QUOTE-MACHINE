@@ -4,54 +4,90 @@ html,
 body {
   box-sizing: border-box;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
 }
-
-.wrapper {
+* .wrapper,
+html .wrapper,
+body .wrapper {
   width: 100vw;
-  height: 100vh;
+  padding: 0px 25px 20px 20px;
+  min-height: 100vh;
+  height: auto;
   display: -ms-grid;
   display: grid;
   place-items: center;
   background-color: #333;
   color: #333;
 }
-.wrapper .quote-box {
+* .wrapper .quote-box,
+html .wrapper .quote-box,
+body .wrapper .quote-box {
   width: 650px;
   height: auto;
   border-radius: 5px;
   padding: 50px;
   background-color: white;
 }
-.wrapper .quote-box .quote {
+@media only screen and (max-width : 700px) {
+  * .wrapper .quote-box,
+html .wrapper .quote-box,
+body .wrapper .quote-box {
+    width: 90vw;
+    padding: 10px;
+  }
+}
+* .wrapper .quote-box .quote,
+html .wrapper .quote-box .quote,
+body .wrapper .quote-box .quote {
   padding: 0px 25px 20px 20px;
 }
-.wrapper .quote-box .quote h1 {
+@media only screen and (max-width : 700px) {
+  * .wrapper .quote-box .quote,
+html .wrapper .quote-box .quote,
+body .wrapper .quote-box .quote {
+    padding: 30px 25px 20px 20px;
+  }
+}
+* .wrapper .quote-box .quote h1,
+html .wrapper .quote-box .quote h1,
+body .wrapper .quote-box .quote h1 {
   text-align: center;
   font-weight: 500;
 }
-.wrapper .quote-box .quote .quote-sign {
+* .wrapper .quote-box .quote .quote-sign,
+html .wrapper .quote-box .quote .quote-sign,
+body .wrapper .quote-box .quote .quote-sign {
   font-size: 50px;
 }
-.wrapper .quote-box .author {
+* .wrapper .quote-box .author,
+html .wrapper .quote-box .author,
+body .wrapper .quote-box .author {
   display: flex;
   justify-content: end;
   margin: 20px 0 50px 0;
 }
-.wrapper .quote-box .floater {
+* .wrapper .quote-box .floater,
+html .wrapper .quote-box .floater,
+body .wrapper .quote-box .floater {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.wrapper .quote-box .floater .post > .tweet-quote,
-.wrapper .quote-box .floater .post > .post-quote {
+* .wrapper .quote-box .floater .post > .tweet-quote,
+* .wrapper .quote-box .floater .post > .post-quote,
+html .wrapper .quote-box .floater .post > .tweet-quote,
+html .wrapper .quote-box .floater .post > .post-quote,
+body .wrapper .quote-box .floater .post > .tweet-quote,
+body .wrapper .quote-box .floater .post > .post-quote {
   color: white;
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;
   background-color: #333;
 }
-.wrapper .quote-box .floater .new-quote {
+* .wrapper .quote-box .floater .new-quote,
+html .wrapper .quote-box .floater .new-quote,
+body .wrapper .quote-box .floater .new-quote {
   width: 130px;
   height: 40px;
   border-radius: 5px;
